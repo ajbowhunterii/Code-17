@@ -1,0 +1,76 @@
+Title:
+Aaron Matthew Jones II
+Section D
+Code 17
+Problem Description:
+    Code 17 is a puzzle game that will take the player through a series of levels with
+varying puzzles of increasing difficulty, but as of now there is only one level. The
+user will run the program and be met with a title screen, and once they press the
+space bar to play, the game begins with the lights turning off and the player must find
+hidden panels to advance to the completion screen. The player's times of completion will
+be recorded in an external file that he or she can view later. The game itself is a
+class that can be used to update and render the game and objects. There are also
+functions, constants, and comments throughout the code wherever necessary. A vector is
+used to store the mouse position at all times and to store whether the user has clicked
+on all the panels. While on the title screen, the user can also press the enter key to
+view the leaderboard, which retrieves his or her times from an external file. Later as
+the game is developed, more levels will be added such as a keypad with a secret code
+hidden somewhere on the screen, and if the player fails more than three times, he or she
+will be sent back to the beginning of the game. The leaderboard will also record your
+attempts when this fail system is implemented. As of now, the game only consists of the
+title screen, first level, leaderboard, and end screen.
+
+Program Documentation:
+    In order to run the program, the user must have SFML set up to where it can be
+accessed by the header in the Game.H file. The user must also go to their working
+directory and enter "..". Once this setup has been completed, one can run the program
+and begin playing the game. When on the title screen, the player has two options, to
+start the game or to view the leaderboard. In order to start the game, the player must
+press space bar, and they will be taken to the first level, which is really just the
+title screen without the text and with the ligths off. In order to pass this level,
+the player should click on all four dimly lit panels in the corners of the screen, and
+they will be presented with the win screen. Then, the player can press left shift to
+return to the title screen. If the player would like to open the leaderboard, while on
+the title screen the user must press the enter key. Their attempts and times will be
+displayed here as well as some instructional text. In order to reset the leaderboard,
+the player must press the backspace key while on the leaderboard screen. To return to
+the title screen from the leaderboard screen, the player may press the left shift key.
+If the player would like to close the game, they can click the x in the top right corner
+of the window, or they can press the escape key.
+    In order to modify or extend the program, one could add more levels by adding to
+the render function and initialize different private objects to display in this space.
+One feature that I was planning to implement given more time would be a second level
+a keypad and a hidden code that the player must enter. To do this, one could make all
+the buttons on the keypad append numbers to a vector and if the vector is equal to
+a key vector, they will pass the level. There could also be a button to clear the vector.
+There would be multiple more public functions within the class to update and check the
+vector. One would draw all of this similarly to how the first level was drawn using SFML.
+
+Tests:
+A multitude of tests were conducted with multiple users. These tests are listed below.
+
+1. The user attempted to resize the window in order to make the game glitch, but the window
+size does not change.
+
+2. The user attempted to press all the panels before the first level was initiated, and it did
+not update the booleans in the vector.
+
+3. The user attempted to press multiple keys at once and the game only followed one input.
+
+4. The user attempted to switch to the leaderboard screen while in the game screen, and it did
+not change.
+
+5. The user attempted to move the window so that it did not detect the mouse clicks, but the
+mouse clicks were still detected properly.
+
+Reflections:
+    If I had another chance to code this game from scratch, I would add more getter and setter
+functions for the different objects that were initialized so that the class could be used in
+more situations. I would also change the time to start only when the scene changes rather that
+being linked to when the space button is pressed. I did learn a multitude of useful things about
+how to use SFML effectively, how to test and debug effectively, how to use pointers properly, and
+other tricks and techniques that I will definitely use in the future. As for another project, I
+would like to code another game because I truly enjoyed seeing what my program turned out to be
+after all the hours of hard work that I put into the project. The next project I create will
+likely be a different kind of game, possibly with more action that uses the same techniques I
+used on this project and more.
